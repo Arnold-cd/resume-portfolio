@@ -26,7 +26,7 @@ function App() {
     {
       id: 2,
       title: "EXPERIENCE",
-      description: "App developer at Nibiaa Devices (Jan-Dec, 2023)",
+      description: "Depression (2024 - Present)\nApp developer at Nibiaa Devices (Jan-Dec, 2023)",
       image: experienceImage,
       color: "rgb(28, 54, 152)"
     },
