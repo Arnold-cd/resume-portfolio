@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Add base URL handling for GitHub Pages */
+:root {
+    --base-url: '/';
+  }
+  
+  /* For GitHub Pages environment */
+  @media (env(GITHUB_PAGES)) {
+    :root {
+      --base-url: '/resume-portfolio/';
+    }
+  }
