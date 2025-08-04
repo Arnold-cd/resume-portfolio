@@ -3,7 +3,9 @@ import aboutMeImage from './assets/about_me.jpg';
 import experienceImage from './assets/exp.jpg';
 import skillsImage from './assets/skills.jpg'
 import projectsImage from './assets/Project.jpg';
-import profileImage from './assets/Arnold.jpg';
+import profileImage from './assets/Me.png';
+import clanDetectorImg from "./assets/clan-detector.png";
+
 
 function App() {
   const [activeSection, setActiveSection] = React.useState(null);
@@ -33,14 +35,15 @@ function App() {
     {
       id: 3,
       title: "SKILLS",
-      description: "React.js • Node.js • Python • MongoDB • Dart • Java \nFlutter • JavaScript • tailwindcss",
+      description: "React.js • Node.js • Python • MongoDB • Dart • C++ \nFlutter • JavaScript • tailwindcss",
       image: skillsImage,
       color: "rgb(189, 66, 252)"
     },
     {
       id: 4,
       title: "PROJECTS",
-      description: "Click to explore my featured projects:\n\n• Sentiment Analysis on Twitter\n • Netflix-Clone ",
+      description: 
+      "Click to explore my featured projects:\n\n• Sentiment Analysis on Twitter\n • Netflix-Clone\n • Clan-Detector",
       image: projectsImage,
       color: "rgb(0, 187, 84)"
     }
@@ -52,7 +55,7 @@ function App() {
       title: "Sentiment Analysis on Twitter",
       description: "Sentiment Analysis on Twitter using NLP, python, NLTK, SkLearn",
       technologies: ["NLP", "Python", "NLTK", "SkLearn"],
-      image: "https://placehold.co/800x400/1a1a1a/666"
+      image: "https://placehold.co/800x400/"
     },
     {
       id: 2,
@@ -60,6 +63,14 @@ function App() {
       description: "Netflix Clone built using React.js, Node.js, and MongoDB",
       technologies: ["React", "Express", "MongoDB", "Node.js"],
       image: "https://placehold.co/800x400/"
+    },
+    {
+      id: 2,
+      title:"",
+      link:"https://meetei-app.vercel.app/",
+      description: "Clan-Detector built using React.js, Node.js, and MongoDB",
+      technologies: ["React", "Express", "MongoDB", "Node.js"],
+      image: clanDetectorImg
     },
     
     // Add more projects as needed
@@ -93,21 +104,21 @@ Sent from your portfolio website`
 };
 
 const SplashScreen = () => (
-  <div className="h-screen bg-gray-900 flex items-center px-4 sm:px-12">
+  <div className="h-screen bg-gray-800 flex items-center px-4 sm:px-12">
     <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 items-center">
       <div className="order-2 sm:order-1 text-center sm:text-left">
         <img
           src={profileImage}
           alt="Profile"
-          className="rounded-full w-48 h-48 sm:w-64 sm:h-64 object-cover mx-auto mb-6 sm:mb-0"
+          className="rounded-full w-48 h-48 sm:w-64 sm:h-64 object-cover mx-auto mb-6 sm:mb-0 hover:scale-105 transition-transform duration-300 shadow-lg"
         />
       </div>
-      <div className="space-y-4 sm:space-y-6 order-1 sm:order-2 text-center sm:text-left">
+      <div className="space-y-4 sm:space-y-6 order-1 sm:order-2 text-center sm:text-left hover:scale-105 transition-transform duration-300">
         <h1 className="text-4xl sm:text-6xl font-bold text-white">Arnold</h1>
-        <p className="text-lg sm:text-xl text-gray-400">Developer</p>
+        <p className="text-lg sm:text-xl text-gray-200">Developer</p>
         <button
           onClick={() => setCurrentView('main')}
-          className="px-6 sm:px-8 py-3 bg-blue-500 rounded-full hover:bg-blue-600 transition-colors flex items-center space-x-2 mx-auto sm:mx-0"
+          className="px-6 sm:px-8 py-3 bg-blue-500 text-lg rounded-full hover:bg-blue-600 transition-colors flex items-center space-x-2 mx-auto sm:mx-0 dark:text-white hover:text-white"
         >
           <span>Click Me</span>
           <span>→</span>
@@ -176,32 +187,48 @@ const ContactForm = () => (
       >
         ← Back
       </button>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto ">
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">My Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="bg-gray-900 rounded-lg overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-sm sm:text-base text-gray-300 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs sm:text-sm text-white"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+          {projects.map((project) => {
+            const cardContent = (
+              <div className="bg-gray-900 rounded-lg overflow-hidden h-full flex flex-col">
+                <img 
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover flex flex-col justify-center items-center"
+                />
+                <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mb-4 flex-1">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs sm:text-sm text-white"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+
+            return project.link ? (
+              <a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg"
+              >
+                {cardContent}
+              </a>
+            ) : (
+              <div key={project.id}>{cardContent}</div>
+            );
+          })}
         </div>
       </div>
     </div>
