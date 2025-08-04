@@ -1,7 +1,6 @@
 {
   "name": "resume-portfolio",
   "version": "0.1.0",
-  "homepage": "https://Anrold-cd.github.io/resume-portfolio",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
