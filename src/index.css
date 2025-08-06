@@ -11,6 +11,6 @@
   /* For GitHub Pages environment */
   @media (env(GITHUB_PAGES)) {
     :root {
-      --base-url: '/resume-portfolio/';
+      --base-url: '/resume/';
     }
   }
