@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.6c470601.css",
+    "main.css": "/static/css/main.f32584cd.css",
     "main.js": "/static/js/main.860e0ff5.js",
     "static/js/488.20267697.chunk.js": "/static/js/488.20267697.chunk.js",
     "static/media/Me.png": "/static/media/Me.f6c3136b75cc26a0c4db.png",
@@ -10,12 +10,12 @@
     "static/media/skills.jpg": "/static/media/skills.830a6dc1bdc97adbef3c.jpg",
     "static/media/clan-detector.png": "/static/media/clan-detector.62105a71757b013d65c4.png",
     "index.html": "/index.html",
-    "main.6c470601.css.map": "/static/css/main.6c470601.css.map",
+    "main.f32584cd.css.map": "/static/css/main.f32584cd.css.map",
     "main.860e0ff5.js.map": "/static/js/main.860e0ff5.js.map",
     "488.20267697.chunk.js.map": "/static/js/488.20267697.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c470601.css",
+    "static/css/main.f32584cd.css",
     "static/js/main.860e0ff5.js"
   ]
 }
